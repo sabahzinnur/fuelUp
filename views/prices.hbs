@@ -1,0 +1,20 @@
+<h1>Prices</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ИД Станции</th>
+    <th>Ид продукта</th>
+    <th>Цена</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  {{#each prices}}
+    <tr>
+      <td>{{Name}}</td>
+      <td>{{ProductId}}</td>
+      <td>{{Price}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

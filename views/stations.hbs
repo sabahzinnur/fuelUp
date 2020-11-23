@@ -1,0 +1,50 @@
+<h1>Stations</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Название</th>
+    <th>Адрес</th>
+    <th>Открыта</th>
+    <th>Пост оплата</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  {{#each stations}}
+    <tr>
+      <td>{{Name}}</td>
+      <td>{{Address}}</td>
+      {{#if ../Enable}}
+        <td>
+          <label for="{{Id}}en">
+            <input id="{{Id}}en" type="checkbox" class="filled-in" checked="checked"/>
+            <span></span>
+          </label>
+        </td>
+      {{else}}
+        <td>
+          <label for="{{Id}}en">
+            <input id="{{Id}}en" type="checkbox" class="filled-in" />
+            <span></span>
+          </label>
+        </td>
+      {{/if}}
+      {{#if ../PostPay}}
+        <td>
+          <label for="{{Id}}pay">
+            <input id="{{Id}}pay" type="checkbox" class="filled-in" checked="checked"/>
+            <span></span>
+          </label>
+        </td>
+      {{else}}
+        <td>
+          <label for="{{Id}}pay">
+            <input id="{{Id}}pay" type="checkbox" class="filled-in" />
+            <span></span>
+          </label>
+        </td>
+      {{/if}}
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
